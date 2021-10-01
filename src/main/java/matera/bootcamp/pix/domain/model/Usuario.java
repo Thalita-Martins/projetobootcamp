@@ -2,7 +2,7 @@ package matera.bootcamp.pix.domain.model;
 
 
 import lombok.Data;
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
+
 
 import javax.persistence.*;
 
@@ -21,6 +21,6 @@ public class Usuario {
     @Column
     private String sobrenome;
 
-    @OneToOne(optional = false)
+    @OneToOne(optional = false, cascade = CascadeType.ALL)
     private ContaCorrente contaCorrente;
 }

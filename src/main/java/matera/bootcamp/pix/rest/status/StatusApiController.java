@@ -11,6 +11,7 @@ public class StatusApiController {
 
     @GetMapping("/api/v1/status")
     public String statusCheck(){
+
         return "up";
     }
 
